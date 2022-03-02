@@ -21,8 +21,9 @@ export default function Home() {
 
     
     //const provider = new ethers.providers.JsonRpcProvider() 
-    const provider = new ethers.providers.JsonRpcProvider("https://rpc-mumbai.maticvigil.com");
-
+     //const provider = new ethers.providers.JsonRpcProvider("https://rpc-mumbai.maticvigil.com");
+   const provider = new ethers.providers.JsonRpcProvider("https://data-seed-prebsc-1-s1.binance.org:8545");
+ 
 
     const contract = new ethers.Contract(marketplaceAddress, NFTMarketplace.abi, provider)
     const data = await contract.fetchMarketItems()
