@@ -113,6 +113,22 @@
   margin-left: 0.5rem;
 }
 
+
+
+.BeerListItem-main-card {
+  width: 320px;
+  height: 415px;
+}
+
+.BeerListItem-img {
+  height: auto;
+  max-height: 250px;
+  width: auto;
+  max-width: 250px;
+}
+
+
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

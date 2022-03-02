@@ -9,6 +9,10 @@ import {
 
 import NFTMarketplace from '../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json'
 
+
+import Image from 'next/image'
+
+
 export default function Home() {
   const [nfts, setNfts] = useState([])
   const [loadingState, setLoadingState] = useState('not-loaded')
@@ -66,6 +70,17 @@ export default function Home() {
     await transaction.wait()
     loadNFTs()
   }
+
+ 
+  //////////////
+  //////////////
+  const myLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 75}`
+  }
+  //////////////
+  //////////////
+
+
   if (loadingState === 'loaded' && !nfts.length) return (<h1 className="px-20 py-10 text-3xl">No items in marketplace</h1>)
   return (
     <div className="flex justify-center">
@@ -74,7 +89,18 @@ export default function Home() {
           {
             nfts.map((nft, i) => (
               <div key={i} className="border shadow rounded-xl overflow-hidden">
-                <img src={nft.image} />
+
+                <div style={{position:'relative'}}  >  
+                           <Image
+                              src={nft.image}
+                              alt={nft.name}
+                              quality={100} 
+                              width="250"
+                              height="250"
+                              loading="lazy"
+                            />  
+                </div>
+
                 <div className="p-4">
                   <p style={{ height: '64px' }} className="text-2xl font-semibold">{nft.name}</p>
                   <div style={{ height: '70px', overflow: 'hidden' }}>
