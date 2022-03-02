@@ -5,7 +5,7 @@ import Link from 'next/link'
 function MyApp({ Component, pageProps }) {
   return (
     <div>
-      <div className="currentNetwork"><p style={{width:"250px", position:"absolute" , right:"0px", textAlign:"right" , marginRight:"20px"}}><small>NetWork : Matic Testnet<br/> (Mumbai)</small></p></div>
+      <div className="currentNetwork"><p style={{width:"250px", position:"absolute" , right:"0px", textAlign:"right" , marginRight:"20px"}}><small>Network: <br/> Matic Testnet  (Mumbai) </small></p></div>
       <nav className="border-b p-6">
         
         <p style={{textAlign:'center', width:"100%"}} className="text-4xl font-bold">NFT Marketplace</p>
