@@ -4,6 +4,8 @@
 
 This is the codebase to go along with tbe blog post [Building a Full Stack NFT Marketplace on Ethereum with Polygon](https://dev.to/dabit3/building-scalable-full-stack-apps-on-ethereum-with-polygon-2cfb)
 
+https://www.youtube.com/watch?v=GKJBEEXUha0
+
 ### Running this project
 
 #### Gitpod
